@@ -143,6 +143,11 @@ def login2():
         return redirect('/')
     
 
+# dashboard.html 파일을 열어주는 api를 생성 
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
 
 
 # 웹서버를 시작한다. (구동한다.) -> 함수의 return과 흡사 -> 
