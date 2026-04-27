@@ -1,8 +1,10 @@
 # flask 프레임워크 안에서 특정 기능을 로드 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 # render_template -> templates 폴더 안에 html 문서를 가져오기 위한 기능
 # request -> 유저가 보낸 데이터에 접근하기 위한 기능
 # redirect -> 특정 주소로 이동
+# url_for -> 특정 주소를 지정하기 위한 기능( 상대 경로 지정 -> app.py 위치로 부터 경로를 설정 )
+#            html 문서 안에서 사용( render_template() 함수를 이용해서 app.py에서 실행 )
 
 # db.py 안에 MyDB를 로드 
 from db import MyDB
