@@ -17,10 +17,11 @@
       href="https://getbootstrap.com/docs/5.3/examples/dashboard/"
     />
     <!-- color_mode.js 해당 파일위치에서 상위로 이동하고 static폴더로 이동 js 폴더 안에 color-mode.js -->
-    <script src="../static/js/color-modes.js"></script>
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+     <!-- url_for 함수를 이용(python 경로 입력)하여 경로를 지정 -->
+    <script src="{{ url_for('static', filename='js/color-modes.js') }}"></script>
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
-    <link href="../static/css/dashboard.css" rel="stylesheet" />
+    <link href="{{url_for('static', filename='css/dashboard.css')}}" rel="stylesheet" />
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -538,7 +539,7 @@
       </div>
     </div>
     <script
-      src="../assets/dist/js/bootstrap.bundle.min.js"
+      src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"
       class="astro-vvvwv3sm"
     ></script>
     <script
@@ -547,6 +548,6 @@
       crossorigin="anonymous"
       class="astro-vvvwv3sm"
     ></script>
-    <script src="dashboard.js" class="astro-vvvwv3sm"></script>
+    <script src="{{url_for('static', filename='js/dashboard.js')}}" class="astro-vvvwv3sm"></script>
   </body>
 </html>
