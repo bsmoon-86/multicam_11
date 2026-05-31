@@ -1,0 +1,10 @@
+# [실습 2] Context & Constraints
+# 목표: Pandas 없이 순수 파이썬으로만 데이터를 파싱하세요.
+# Bad Prompt: "이거 파싱해서 리스트로 만들어줘" (Pandas 사용함)
+# Good Prompt: "외부 라이브러리(Pandas, CSV) 절대 사용 금지. 오직 파이썬 기본 문자열 함수(split, strip)만 사용해서 파싱해."
+
+name, age | email	phone
+Kim, 25 | kim@test.com	010-1111-2222
+Lee , 30| lee@test.com	010-3333-4444
+Park, 22 | park@test.com	
+Choi, 40 | choi@test.com | 010-5555-6666

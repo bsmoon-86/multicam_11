@@ -1,0 +1,6 @@
+[2024-01-01 10:00:01] [INFO] Server started
+[2024-01-01 10:05:22] [WARN] Memory usage high: 85%
+[2024-01-01 10:10:05] [ERROR] ConnectionRefusedError: DB-01 timeout
+[2024-01-01 10:11:00] [INFO] User login: user_123
+[2024-01-01 10:15:30] [ERROR] NullPointerException at /api/v1/payment
+[2024-01-01 10:20:00] [WARN] Disk space low

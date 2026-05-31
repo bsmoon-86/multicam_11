@@ -1,0 +1,10 @@
+[실습 4] Commit Message Generation
+# 미션: AI에게 "이 Diff를 분석해 Conventional Commits 메시지를 써줘"라고 요청하세요.
+
+diff --git a/auth.py b/auth.py
+- if password == "1234":
++ if check_password_hash(user.pw_hash, password):
+     return True
++
++ def logout():
++     session.clear()
