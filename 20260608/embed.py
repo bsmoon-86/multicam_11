@@ -43,8 +43,8 @@ def global_vari_set(docs):
         workers=2, 
         seed=42
     )
-
-    globals()['wv'] = w2v.wv
+    global wv
+    wv = w2v.wv
 
     tfidf_vec = TfidfVectorizer(
         tokenizer=tokenize, 
