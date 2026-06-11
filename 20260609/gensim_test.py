@@ -1,5 +1,3 @@
-
-from sklearn.metrics import classification_report
 import numpy as np 
 from gensim.models import Word2Vec, FastText
 # sklearn에서 기본적으로 제공해주는 함수들을 상속 받기 위해서 특정 객체를 로드 
@@ -111,7 +109,11 @@ class Vectorizer( BaseEstimator, TransformerMixin ):
         # token : 토큰화 된 문장 데이터 (1개의 문장)
         vectors = []
         for word in token:
-            if word in self.model.wv.index_to_key:
+            if self.type == 'w2v':
+                if word in self.model.wv.index_to_key:
+                    vec = self.model.wv[word]
+                    vectors.append(vec)
+            elif self.type == 'ft':
                 vec = self.model.wv[word]
                 vectors.append(vec)
         # vectors 데이터가 존재하지 않는 경우 -> 특정 문장에서 단어들이 단어사전에 존재하지 않을때
